@@ -1,0 +1,20 @@
+/* Skip to Main Content
+Each page have a Skip to Main Content link that is not visible in the mobile view */
+.skip-link {
+    position:absolute;
+    top: -9999px;
+    z-index: 1000;
+    background-color: blue;
+    color:white;
+    padding: 8px 16px;
+}
+
+.skip-link:focus {
+    top: 10px;
+}
+
+/* Navigation
+- Navigation is consistent form page to page
+- Link in Navigation change to clearly indicate what page I am currently on in the navigation
+- Current link is not indicated just by using color.
+- H1 matches Page title to some degree */
