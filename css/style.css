@@ -11,13 +11,14 @@ body {
     padding: 0;
 }
 
-header, main, footer {
-    padding: 1rem;
+main,
+footer {
+    padding: 2rem;
 }
 
 main {
-  max-width: 90rem;
-  margin-inline: auto;
+    max-width: 90rem;
+    margin-inline: auto;
 }
 
 h1 {
@@ -45,6 +46,16 @@ p {
     font-size: clamp(1rem, 0.9rem + 0.5vw, 1.1rem);
     line-height: 1.6;
     color: #111827;
+}
+
+/* image and media styles */
+/* citation: from online search */
+iframe {
+    width: 100%;
+    max-width: 560px;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    display: block;
 }
 
 img {
@@ -77,7 +88,7 @@ Each page have a Skip to Main Content link that is not visible in the mobile vie
 /* Citation: From discussion week 6 */
 
 header {
-    background-color: #2c3e50;
+    background-color: #00274C;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -108,10 +119,14 @@ nav a:hover {
     background-color: #34495e;
 }
 
+/* Active link changes style */
 nav .active {
-    background-color: #e74c3c;
-    color: #ecf0f1;
+    background-color: #FFCB05;
     font-weight: bold;
+}
+
+nav .active a {
+    color: #00274C;
 }
 
 /* ========================================
@@ -121,8 +136,7 @@ nav .active {
 /* Citation: From discussion week 6 */
 
 footer {
-    background-color: #2c3e50;
-    color: #ecf0f1;
+    background-color: #00274C;
     text-align: center;
     padding: 2rem 1rem;
     margin-top: 2rem;
@@ -130,6 +144,7 @@ footer {
 
 footer p {
     margin: 0;
+    color: #ecf0f1;
 }
 
 
