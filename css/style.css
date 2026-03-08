@@ -1,3 +1,39 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.75rem;
+    color: #2c3e50;
+    margin-top: 0;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+
 /* Skip to Main Content
 Each page have a Skip to Main Content link that is not visible in the mobile view */
 .skip-link {
@@ -13,8 +49,40 @@ Each page have a Skip to Main Content link that is not visible in the mobile vie
     top: 10px;
 }
 
-/* Navigation
+/* Header and Navigation
 - Navigation is consistent form page to page
 - Link in Navigation change to clearly indicate what page I am currently on in the navigation
 - Current link is not indicated just by using color.
 - H1 matches Page title to some degree */
+
+/* Citation: From discussion week 6 */
+
+header {
+    background-color: #2c3e50;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav a {
+    color: #ecf0f1;
+    padding: 1rem 1.5rem;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #34495e;
+}
+
+
+
