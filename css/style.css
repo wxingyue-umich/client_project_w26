@@ -9,9 +9,10 @@ body {
     color: #111827;
 }
 
-main{
-    max-width: 80rem;;
-    padding-inline:clamp(1rem, 5vw, 80rem);
+main {
+    max-width: 80rem;
+    ;
+    padding-inline: clamp(1rem, 5vw, 80rem);
     margin-inline: auto;
 }
 
@@ -29,6 +30,7 @@ h2 {
     line-height: 1.2;
     color: #2c3e50;
     padding-bottom: 0.5rem;
+    padding-top: 1rem;
 }
 
 h3 {
@@ -36,6 +38,7 @@ h3 {
     line-height: 1.2;
     color: #2c3e50;
     padding-bottom: 0.5rem;
+    padding-top:0.5rem;
 }
 
 p {
@@ -158,3 +161,27 @@ footer p {
 - Font is big enough for me to read and click on each link from a mobile device
 - Good use of fluid measurements
 - Good use of RWD including Grid */
+
+/* Index page grid */
+.homepage {
+    .intro {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        gap: 2rem;
+    }
+
+    .benefit-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+        gap: clamp(0.75rem, 2vw, 1.25rem);
+        list-style: none;
+        padding: 0;
+        margin-top: 1rem;
+    }
+
+    .benefit-list li {
+        padding: clamp(0.75rem, 2vw, 1.25rem);
+        background-color: #f5f5f5;
+        border-left: 4px solid #FFCB05;
+    }
+}
