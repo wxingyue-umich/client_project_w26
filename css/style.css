@@ -277,3 +277,36 @@ footer a:visited {
         border-left: 4px solid #FFCB05;
     }
 }
+
+.networking {
+    .networking-intro,
+    .fair {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+        gap: 2rem;
+    }
+
+    .fair {
+        margin-top: 2rem;
+    }
+
+    .networking-intro h2,
+    .fair h2 {
+        padding-top: 0;
+    }
+
+    .networking-resources-list,
+    .fair-resources-list {
+        padding: clamp(0.75rem, 2vw, 1.25rem);
+        padding-top: 0;
+        background-color: #f5f5f5;
+    }
+
+    .networking-resources-list ul,
+    .fair-resources-list ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+}
