@@ -115,15 +115,15 @@ nav ul {
 }
 
 nav a {
-  color: #ecf0f1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: clamp(2.5rem, 5vw, 3rem);
-  transition: background-color 0.3s ease;
-  text-decoration: none;
-  overflow-wrap: break-word;
+    color: #ecf0f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: clamp(2.5rem, 5vw, 3rem);
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    overflow-wrap: break-word;
 }
 
 nav a:hover {
@@ -188,7 +188,7 @@ footer a:visited {
     .intro {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
-        gap: 1rem;
+        gap: 2rem;
     }
 
     .intro h2 {
@@ -229,3 +229,51 @@ footer a:visited {
     .resource-img {
         grid-row: 1 / span 2;
     }
+}
+
+.resume {
+
+    .resume-intro,
+    .resume-resources {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+        gap: 2rem;
+    }
+
+    .resume-intro h2,
+    .resume-resources h2 {
+        padding-top: 0;
+    }
+
+    .resume-resources li {
+        list-style: none;
+        padding-bottom: 0.5rem;
+    }
+
+    .resume-guide {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+        gap: clamp(0.75rem, 2vw, 1.25rem);
+        list-style: none;
+        padding-bottom: 2rem;
+    }
+
+    .resume-guide li {
+        padding: clamp(0.75rem, 2vw, 1.25rem);
+        background-color: #f5f5f5;
+        border-left: 4px solid #FFCB05;
+    }
+
+    .resume-faq {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        list-style: none;
+    }
+
+    .resume-faq li {
+        padding: clamp(0.75rem, 2vw, 1.25rem);
+        background-color: #f5f5f5;
+        border-left: 4px solid #FFCB05;
+    }
+}
