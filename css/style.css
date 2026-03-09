@@ -1,4 +1,7 @@
-/* Base styles */
+/* ========================================
+   Base styles
+   ======================================== */
+/* Citation: I referred to the week 6 discussion starter_style.css and modified it */
 html {
     font-size: 100%;
 }
@@ -7,6 +10,7 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.2;
     color: #111827;
+    background-color: #EDECEC;
 }
 
 main {
@@ -16,7 +20,9 @@ main {
     margin-inline: auto;
 }
 
-/* Typography */
+/* ========================================
+   Typography
+   ======================================== */
 h1 {
     font-size: clamp(1.75rem, 1.4rem + 1.8vw, 2.25rem);
     line-height: 1.2;
@@ -47,20 +53,25 @@ p {
     color: #111827;
 }
 
-/* image and media styles */
-/* citation: from online search */
+a {
+    color: #1A3CAD;
+    text-decoration: underline;
+}
+
+/* ========================================
+   Images and iframes
+   ======================================== */
+/* Citation: from https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios*/
 iframe {
     max-width: min(100%, 560px);
     height: auto;
     aspect-ratio: 16 / 9;
-    display: block;
 }
 
 img {
     width: 100%;
-    max-width: min(100%, 560px);
     height: auto;
-    display: block;
+    max-width: min(100%, 560px);
 }
 
 p,
@@ -69,8 +80,10 @@ a {
     overflow-wrap: break-word;
 }
 
-/* Skip to Main Content
-Each page have a Skip to Main Content link that is not visible in the mobile view */
+/* ========================================
+   Skip to Main Content Link
+   ======================================== */
+/* Citation: I referred to my solution to week 6 discussion. */
 .skip-link {
     position: absolute;
     top: -9999px;
@@ -78,19 +91,17 @@ Each page have a Skip to Main Content link that is not visible in the mobile vie
     background-color: blue;
     color: white;
     padding: 0.5rem 1rem;
+    text-decoration: none;
 }
 
 .skip-link:focus {
     top: 10px;
 }
 
-/* Header and Navigation
-- Navigation is consistent form page to page
-- Link in Navigation change to clearly indicate what page I am currently on in the navigation
-- Current link is not indicated just by using color.
-- H1 matches Page title to some degree */
-
-/* Citation: From discussion week 6 */
+/* ========================================
+   Header and Navigation
+   ======================================== */
+/* Citation: I referred to the week 6 discussion starter_style.css and modified it */
 
 header {
     background-color: #00274C;
@@ -150,10 +161,9 @@ nav .active a {
 }
 
 /* ========================================
-   FOOTER (fully styled)
+   FOOTER
    ======================================== */
-
-/* Citation: From discussion week 6 */
+/* Citation:  I referred to the week 6 discussion starter_style.css and modified it */
 
 footer {
     background-color: #00274C;
@@ -176,15 +186,20 @@ footer a:visited {
     color: #b3a676;
 }
 
+/* ========================================
+   Index page grid
+   ======================================== */
+/* Citation: To achieve responsive grid layout without media queries, and fluid typography,
+    I referred to
+    https://www.sitepoint.com/responsive-css-layout-grids-without-media-queries/
+    https://medium.com/@FAANG/modern-responsive-web-design-a-comprehensive-guide-4154dbe15882
+    */
 
-/* - Content is designed with the mobile first perspective
-- All content is available on smaller screens and usable.
-- Font is big enough for me to read and click on each link from a mobile device
-- Good use of fluid measurements
-- Good use of RWD including Grid */
-
-/* Index page grid */
 .homepage {
+    h1 {
+        padding-bottom: 2rem;
+    }
+
     .intro {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
@@ -205,7 +220,7 @@ footer a:visited {
 
     .benefit-list li {
         padding: clamp(0.75rem, 2vw, 1.25rem);
-        background-color: #f5f5f5;
+        background-color: #fcfcfc;
         border-left: 4px solid #FFCB05;
     }
 
@@ -218,7 +233,7 @@ footer a:visited {
     .start-link,
     .resource-link {
         padding: clamp(0.75rem, 2vw, 1.25rem);
-        background-color: #f5f5f5;
+        background-color: #fcfcfc;
     }
 
     .start-link li,
@@ -231,7 +246,19 @@ footer a:visited {
     }
 }
 
+/* ========================================
+   Resume page grid
+   ======================================== */
+/* Citation: To achieve responsive grid layout without media queries, and fluid typography,
+    I referred to
+    https://www.sitepoint.com/responsive-css-layout-grids-without-media-queries/
+    https://medium.com/@FAANG/modern-responsive-web-design-a-comprehensive-guide-4154dbe15882
+    */
 .resume {
+
+    h1 {
+        padding-bottom: 2rem;
+    }
 
     .resume-intro,
     .resume-resources {
@@ -260,7 +287,7 @@ footer a:visited {
 
     .resume-guide li {
         padding: clamp(0.75rem, 2vw, 1.25rem);
-        background-color: #f5f5f5;
+        background-color: #fcfcfc;
         border-left: 4px solid #FFCB05;
     }
 
@@ -273,12 +300,24 @@ footer a:visited {
 
     .resume-faq li {
         padding: clamp(0.75rem, 2vw, 1.25rem);
-        background-color: #f5f5f5;
+        background-color: #fcfcfc;
         border-left: 4px solid #FFCB05;
     }
 }
 
+/* ========================================
+   Networking page grid
+   ======================================== */
+/* Citation: To achieve responsive grid layout without media queries, and fluid typography,
+    I referred to
+    https://www.sitepoint.com/responsive-css-layout-grids-without-media-queries/
+    https://medium.com/@FAANG/modern-responsive-web-design-a-comprehensive-guide-4154dbe15882
+    */
 .networking {
+
+    h1 {
+        padding-bottom: 2rem;
+    }
 
     .networking-intro,
     .fair {
@@ -300,7 +339,8 @@ footer a:visited {
     .fair-resources-list {
         padding: clamp(0.75rem, 2vw, 1.25rem);
         padding-top: 0;
-        background-color: #f5f5f5;
+        margin-top: 1rem;
+        background-color: #fcfcfc;
     }
 
     .networking-resources-list ul,
@@ -312,7 +352,16 @@ footer a:visited {
     }
 }
 
+/* ========================================
+   Career Exploration page grid
+   ======================================== */
+/* Citation: To achieve responsive grid layout without media queries, and fluid typography,
+    I referred to
+    https://www.sitepoint.com/responsive-css-layout-grids-without-media-queries/
+    https://medium.com/@FAANG/modern-responsive-web-design-a-comprehensive-guide-4154dbe15882
+    */
 .career-exploration {
+
     .path {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
@@ -327,7 +376,7 @@ footer a:visited {
         grid-template-rows: auto;
         gap: 1rem;
         align-items: start;
-        background-color: #f5f5f5;
+        background-color: #fcfcfc;
         padding: 1rem;
         border-top: 4px solid #FFCB05;
     }
@@ -359,7 +408,7 @@ footer a:visited {
 
     .action-steps li {
         padding: clamp(0.75rem, 2vw, 1.25rem);
-        background-color: #f5f5f5;
+        background-color: #fcfcfc;
         border-left: 4px solid #FFCB05;
     }
 
