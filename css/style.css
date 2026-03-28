@@ -186,6 +186,11 @@ footer a:visited {
     color: #b3a676;
 }
 
+footer p:last-child {
+    margin-top: 16px;
+    font-size: 80%;
+}
+
 /* ========================================
    Index page grid
    ======================================== */
