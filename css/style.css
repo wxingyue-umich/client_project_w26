@@ -99,6 +99,19 @@ a {
 }
 
 /* ========================================
+   Header and Footer
+   ======================================== */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+/* ========================================
    Header and Navigation
    ======================================== */
 /* Citation: I referred to the week 6 discussion starter_style.css and modified it */
@@ -417,4 +430,26 @@ footer p:last-child {
         border-left: 4px solid #FFCB05;
     }
 
+}
+
+/* ========================================
+   404 page
+   ======================================== */
+.error-page {
+    h1 {
+        padding-bottom: 2rem;
+    }
+
+    .error-content p {
+        margin-bottom: 2rem;
+    }
+
+    .error-CTA a{
+        display: inline-block;
+        padding: 0.75rem 1.25rem;
+        background-color: #FFCB05;
+        text-decoration: none;
+        font-weight: bold;
+        color: #00274C;
+    }
 }
