@@ -512,8 +512,8 @@ footer p:last-child {
     @media (min-width: 1024px) {
 
 
-        .networking-intro{
-            display:contents;
+        .networking-intro {
+            display: contents;
         }
 
         .intro-grid {
@@ -547,17 +547,18 @@ footer p:last-child {
             grid-row: 3;
         }
 
-        .fair{
+        .fair {
             align-items: center;
         }
 
         .fair-img {
-            grid-column:2;
-            grid-row:1/span 2;
+            grid-column: 2;
+            grid-row: 1/span 2;
         }
+
         .fair-resources-list {
-            grid-column:1;
-            grid-row:2;
+            grid-column: 1;
+            grid-row: 2;
         }
     }
 }
@@ -589,7 +590,73 @@ footer p:last-child {
         background-color: #fcfcfc;
         padding: 1rem;
         border-top: 4px solid #FFCB05;
+        cursor: pointer;
+        transition: box-shadow .3s;
     }
+
+    .toggle-btn {
+    display: block;
+    margin-top: 1rem;
+    padding: 0.5rem 1.25rem;
+    background-color: white;
+    color: #00274C;
+    border: 2px solid #00274C;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.toggle-btn:hover {
+    background-color: #00274C;
+    color: #ffffff;
+}
+
+.toggle-btn:focus-visible {
+    /* reference: https://css-tricks.com/the-focus-visible-trick/ */
+    outline: 3px solid #FFCB05;
+    outline-offset: 2px;
+}
+
+    .data:hover,
+    .library:hover,
+    .ux:hover {
+        box-shadow: 0 0 20px gray
+        /* reference: Hover shadow effect retrieved from https://codepen.io/ovdojoey/pen/BomKyZ*/
+    }
+
+    .data.show-back .data-text,
+    .data.show-back .data-img {
+        display: none;
+    }
+
+    .data.show-back .data-course {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .library.show-back .library-text,
+    .library.show-back .library-img {
+        display: none;
+    }
+
+    .library.show-back .lakes-course {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .ux.show-back .ux-text,
+    .ux.show-back .ux-img {
+        display: none;
+    }
+
+    .ux.show-back .ux-course {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
 
     .data-text,
     .library-text,
@@ -620,6 +687,12 @@ footer p:last-child {
         padding: clamp(0.75rem, 2vw, 1.25rem);
         background-color: #fcfcfc;
         border-left: 4px solid #FFCB05;
+    }
+
+    .ux-course,
+    .data-course,
+    .lakes-course {
+        display: none;
     }
 
     /* Tablet View */
@@ -656,24 +729,24 @@ footer p:last-child {
     }
 }
 
-    /* ========================================
+/* ========================================
    404 page
    ======================================== */
-    .error-page {
-        h1 {
-            padding-bottom: 2rem;
-        }
-
-        .error-content p {
-            margin-bottom: 2rem;
-        }
-
-        .error-CTA a {
-            display: inline-block;
-            padding: 0.75rem 1.25rem;
-            background-color: #FFCB05;
-            text-decoration: none;
-            font-weight: bold;
-            color: #00274C;
-        }
+.error-page {
+    h1 {
+        padding-bottom: 2rem;
     }
+
+    .error-content p {
+        margin-bottom: 2rem;
+    }
+
+    .error-CTA a {
+        display: inline-block;
+        padding: 0.75rem 1.25rem;
+        background-color: #FFCB05;
+        text-decoration: none;
+        font-weight: bold;
+        color: #00274C;
+    }
+}
