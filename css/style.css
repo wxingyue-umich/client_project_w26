@@ -63,7 +63,6 @@ a {
    ======================================== */
 /* Citation: from https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios*/
 iframe {
-    max-width: min(100%, 560px);
     height: auto;
     aspect-ratio: 16 / 9;
 }
@@ -173,6 +172,7 @@ nav .active a {
     padding: 1rem;
 }
 
+
 /* ========================================
    FOOTER
    ======================================== */
@@ -220,7 +220,7 @@ footer p:last-child {
 
     .intro {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+        grid-template-columns: 1fr;
         gap: 1rem;
     }
 
@@ -297,7 +297,13 @@ footer p:last-child {
     }
 
     /* desktop view */
-     @media (min-width: 1280px) {
+    @media (min-width: 1024px) {
+        .intro {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
         .benefit-list {
             grid-template-columns: repeat(5, 1fr);
         }
@@ -393,6 +399,44 @@ footer p:last-child {
         background-color: #fcfcfc;
         border-left: 4px solid #FFCB05;
     }
+
+    /* Tablet View */
+    @media (min-width: 768px) {
+        .resume-guide {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .resume-guide li {
+            grid-column: span 2;
+        }
+
+        .resume-guide li:last-child {
+            grid-column: 2/4;
+        }
+    }
+
+    /* Desktop View */
+
+    @media (min-width: 1024px) {
+        .resume-guide {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+        }
+
+        .resume-guide li {
+            grid-column: span 1;
+        }
+
+        .resume-guide li:last-child {
+            grid-column: 5/6;
+        }
+
+        .resume-faq {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
 }
 
 /* ========================================
@@ -412,7 +456,7 @@ footer p:last-child {
     .networking-intro,
     .fair {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+        grid-template-columns: 1fr;
         gap: 1rem;
     }
 
@@ -440,6 +484,82 @@ footer p:last-child {
         flex-direction: column;
         gap: 0.25rem;
     }
+
+    /* Tablet View */
+    @media (min-width: 768px) {
+
+        .networking-intro,
+        .fair {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .networking-intro-img,
+        .fair-img {
+            grid-row: span 2;
+        }
+
+        .networking-resources-list,
+        .fair-resources-list {
+            grid-row: 2;
+            grid-column: 2
+        }
+    }
+
+    /* Desktop View */
+
+    @media (min-width: 1024px) {
+
+
+        .networking-intro{
+            display:contents;
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 8rem;
+            align-items: center;
+        }
+
+        .networking-intro-img {
+            grid-column: 1;
+            grid-row: 1/span 3;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .networking-intro-text {
+            grid-column: 2;
+            grid-row: 1;
+        }
+
+        .networking-resources-list {
+            grid-column: 2;
+            grid-row: 2;
+        }
+
+        .career-link {
+            grid-column: 2;
+            grid-row: 3;
+        }
+
+        .fair{
+            align-items: center;
+        }
+
+        .fair-img {
+            grid-column:2;
+            grid-row:1/span 2;
+        }
+        .fair-resources-list {
+            grid-column:1;
+            grid-row:2;
+        }
+    }
 }
 
 /* ========================================
@@ -454,7 +574,7 @@ footer p:last-child {
 
     .path {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+        grid-template-columns: 1fr;
         gap: 1rem;
         padding-top: 1rem
     }
@@ -502,26 +622,58 @@ footer p:last-child {
         border-left: 4px solid #FFCB05;
     }
 
+    /* Tablet View */
+    @media (min-width: 768px) {
+        .path {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        .library,
+        .data,
+        .ux {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        /* Desktop View */
+
+        @media (min-width: 1024px) {
+            .path {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .library,
+            .data,
+            .ux {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    }
 }
 
-/* ========================================
+    /* ========================================
    404 page
    ======================================== */
-.error-page {
-    h1 {
-        padding-bottom: 2rem;
-    }
+    .error-page {
+        h1 {
+            padding-bottom: 2rem;
+        }
 
-    .error-content p {
-        margin-bottom: 2rem;
-    }
+        .error-content p {
+            margin-bottom: 2rem;
+        }
 
-    .error-CTA a {
-        display: inline-block;
-        padding: 0.75rem 1.25rem;
-        background-color: #FFCB05;
-        text-decoration: none;
-        font-weight: bold;
-        color: #00274C;
+        .error-CTA a {
+            display: inline-block;
+            padding: 0.75rem 1.25rem;
+            background-color: #FFCB05;
+            text-decoration: none;
+            font-weight: bold;
+            color: #00274C;
+        }
     }
-}
